@@ -16,8 +16,8 @@ ll bruteForces(ll n){
 //! Optimize Solution:
 ll optimizeSolution(ll n){
     ll countDivisor = 0;
-    for(ll i = 2; i*i < n; i++){
-        if(n % 2 == 0){
+    for(ll i = 1; i*i <= n; i++){
+        if(n % i == 0){
             countDivisor++;
 
             if(i != n/i){
@@ -35,4 +35,5 @@ int main(){
 
     // cout << bruteForces(n) << endl;
     cout << optimizeSolution(n) << endl;
+    return 0;
 }
